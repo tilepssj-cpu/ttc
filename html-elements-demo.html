@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Elements Demo</title>
+    <style>
+      :root {
+        --bg: #f5f7ff;
+        --panel: #ffffff;
+        --primary: #3b82f6;
+        --text: #1f2937;
+        --muted: #4b5563;
+        --border: #dbe3f0;
+        --code: #0f172a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #eef4ff, #f8fafc);
+        color: var(--text);
+        padding: 24px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .demo-box {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+      }
+
+      h1 { color: var(--primary); }
+
+      p {
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      ul, ol {
+        padding-left: 24px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+      }
+
+      .code {
+        background: var(--code);
+        color: #e2e8f0;
+        padding: 16px;
+        border-radius: 12px;
+        overflow-x: auto;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="demo-box">
+        <h1 id="page-title" title="Main heading">HTML Elements Demo</h1>
+        <p lang="en">
+          This is a classroom example showing the most common HTML elements and their attributes.
+        </p>
+      </header>
+
+      <main>
+        <section class="demo-box">
+          <h2>Headings from h1 to h6</h2>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </section>
+
+        <section class="demo-box">
+          <h2>Paragraph Example</h2>
+          <p title="Helpful paragraph description">
+            HTML helps us create structured web pages. Paragraphs are used to display normal text,
+            while attributes such as <strong>title</strong> and <strong>lang</strong> add extra meaning and behavior.
+          </p>
+        </section>
+
+        <section class="demo-box">
+          <h2>Lists</h2>
+          <div class="grid">
+            <div>
+              <h3>Unordered list</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Ordered list</h3>
+              <ol>
+                <li>Learn tags</li>
+                <li>Build structure</li>
+                <li>Style the page</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="demo-box">
+          <h2>Links and Images</h2>
+          <p>
+            Visit <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools HTML Tutorial</a>
+            to learn more.
+          </p>
+
+          <img
+            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
+            alt="Laptop and code on a desk"
+            width="600"
+            height="400"
+          />
+        </section>
+
+        <section class="demo-box">
+          <h2>Sample HTML Code</h2>
+          <pre class="code"><code>&lt;h1 title="Main heading"&gt;HTML Elements Demo&lt;/h1&gt;
+&lt;p lang="en" title="Helpful paragraph description"&gt;
+  This is a paragraph.
+&lt;/p&gt;
+&lt;ul title="Unordered list"&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol title="Ordered list"&gt;
+  &lt;li&gt;Learn tags&lt;/li&gt;
+  &lt;li&gt;Build structure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;
+  Visit site
+&lt;/a&gt;
+&lt;img src="image.jpg" alt="Example image" width="300" height="200" /&gt;</code></pre>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
